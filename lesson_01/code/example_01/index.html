@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Welcome to HTML</h1>
+    <ul>
+      <li>
+        <a href="https://ru.wikipedia.org/wiki/Perucetus_colossus">
+          Колоссальный кит
+        </a>
+      </li>
+      <li>
+        <a href="#nested-element-example">
+          Пример вложенного элемента
+        </a>
+      </li>
+      <li>
+        <a href="#lists">
+          Пример вложенного элемента
+        </a>
+      </li>
+    </ul>
+    <p>P - is tag for paragraph</p>
+    <!--
+      <></> - парные теги
+      <> - одиночные теги - singular - когда не требуется закрывающий
+      <div /> - самозакрывающийся тег self-closing
+      p - paragraph
+      h1, h2 ... - заголовок
+      img - image - изображение, два атрибута: 
+        src - source - источник - адрес ресурса - например, картинки
+        alt - alternative - 
+    -->
+    <h2>Подзаголовок</h2>
+    <div>
+      <p id="nested-element-example"> Пример вложенного элемента</p>
+    </div>
+    <!-- пример картинки с абсолютным путем src - ссылка на интернет-ресурс -->
+    <img
+      src="https://hips.hearstapps.com/hmg-prod/images/womanyellingcat-1573233850.jpg"
+      alt="meme with a cat"
+      width="400"
+    />
+    <!-- example_01\img\memecat.jpg
+      . точка - это текущая папка относительно index.html
+      .. - родительская папка
+    -->
+    <br />
+    <img src="./img/memecat.jpg" alt="meme with a cat" />
+    <h2 id="lists">Списки (Lists)</h2>
+    <!-- unordered list - ненумерованный 
+        li - list item - элемент списка
+    -->
+    <h3>Мои любимые занятия</h3>
+    <!-- 
+      type: - отвечает за тип маркера
+      - none - без маркера
+      - circle - незаполненный кружок
+      - disk - заполненный кружок(по умолчанию)
+      - square - заполненный квадрат
+     -->
+    <ul type="">
+      <li>Чесать пузо коту</li>
+      <li>Загорать на солнышке</li>
+      <li>Кушать свежие фрукты</li>
+    </ul>
+    <!-- 
+      ol - ordered list - нумерованный список
+      type:
+        1 - арабские цифры(по умолчанию)
+        I - большие римские цифры
+        i - маленькие римские цифры
+        a - буквы латинского алфавита
+        A - большие буквы латинского алфавита
+      reversed - меняет порядок следования
+      start="4" - с какого элемента начнем
+     -->
+    <h2>Топ три занятия на вечер пятницы</h2>
+    <ol type="1" reversed start="5">
+      <li>Гулять по дикой природе</li>
+      <li>Велопрогулка</li>
+      <li>Ходить в гости</li>
+    </ol>
+    <!-- 
+      table - таблица
+      tr - table row - row of cells in a table - строка
+      td - table data - ячейка 
+     -->
+    <table border="2">
+      <tr>
+        <th>Name</th>
+        <th>Height</th>
+        <th>Eye color</th>
+      </tr>
+      <tr>
+        <td>Semen</td>
+        <td>184</td>
+        <td>Blue</td>
+      </tr>
+      <tr>
+        <td>George</td>
+        <td>176</td>
+        <td>Brown</td>
+      </tr>
+    </table>
+  </body>
+</html>
