@@ -1,0 +1,66 @@
+.card {
+  width: 200px;
+  height: 300px;
+  background-color: lightpink;
+}
+.container {
+  /* свойство указывается у родительского контейнера - делает контейнер гибким */
+  display: flex;
+  gap: 10px;
+  /* 
+  justify-content - выравнивание по главной оси
+    - space-between - когда все место между элементами (по краям нет)
+    - space-around - еще добавит расстояния от элементов до краев
+    - space-evenly - расстояние от краев и между элементами равны
+    - center 
+    - flex-start - от начала главной оси
+    - flex-end - элементы расположены в конце главной оси (не обязательно справа)
+  */
+  justify-content: space-around;
+  /* flex-wrap - если элементы не помещаются на строке, он переносится на следующую */
+  flex-wrap: wrap;
+  /* 
+  flex-direction - определяет положение главнйо оси
+    - row - в строку слева направо 
+    - column - в столбик сверху вниз
+    - row-reverse - в строку справа налево
+    - column-reverse - в столбик снизу вверх
+  */
+  flex-direction: row-reverse;
+}
+.short {
+  width: 200px;
+  height: 300px;
+}
+
+.tall {
+  width: 200px;
+  height: 250px;
+}
+
+.card {
+  background-color: lightpink;
+}
+.container-2 {
+  /* мы задали высоту только для демонстративных целей */
+  height: 800px;
+  background-color: lightgray;
+  display: flex;
+  gap: 24px;
+  /* выравнивание элементов по основной оси main-axis */
+  justify-content: flex-end;
+  /* выравнивание элементов по переречной оси cross-axis */
+  align-items: flex-start;
+  flex-wrap: wrap;
+  /* как расположатся все элементы внутри контейнера */
+}
+.container-3 {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+}
+.container-4 {
+  display: flex;
+  flex-direction: column;
+  background-color: gray;
+}

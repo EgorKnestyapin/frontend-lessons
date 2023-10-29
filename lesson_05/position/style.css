@@ -1,0 +1,74 @@
+body {
+  /* 
+  100vh === высота вьюпорта - view-port height
+  100vw === ширина вьюпорта - view-port width 
+  */
+  height: 300vh;
+}
+.purple {
+  background-color: purple;
+}
+.green {
+  background-color: lightgreen;
+}
+.box {
+  width: 200px;
+  height: 200px;
+  margin: 20px;
+  /* padding: 20px; */
+  position: static;
+}
+/* Пример 1 */
+.second {
+  position: relative;
+  top: -30px;
+  left: 50px;
+}
+/* Пример 2 */
+.small-box {
+  width: 100px;
+  height: 100px;
+  bottom: 5px;
+}
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  left: 50px;
+}
+.sun {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: yellow;
+}
+/* Пример 3 */
+.horizon {
+  height: 200px;
+  width: 500px;
+  background-color: lightcyan;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.close-horizon {
+  position: absolute;
+  color: red;
+  background-color: bisque;
+  top: 10px;
+  right: 10px;
+}
+.banner {
+  width: 100%;
+  height: 30px;
+  background-color: gold;
+  position: sticky;
+  top: 30px;
+  /* показывает слой компонента или, другими словами, приоритет */
+  /* у кого он больше, тот будет сверху */
+  z-index: 1;
+}
