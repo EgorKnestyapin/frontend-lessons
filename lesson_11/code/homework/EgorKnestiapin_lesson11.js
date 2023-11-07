@@ -18,24 +18,39 @@ cars.forEach((car, index) => {
 });
 console.log(carsWithoutPrice);
 
+// 2й способ
+const newArray = cars.map((car) => {
+  // Порядок не важен
+  // const { price, brand, isDiesel } = car;
+  const { price, ...rest } = car;
+  return rest;
+});
+console.log(newArray);
+
 /* Задание 2
 Создайте новый массив, где оставьте только машины с дизельным двигателем.
 */
 const carsWithOnlyDiesel = cars.filter((car) => car.isDiesel === true);
+// cars.filter((car) => car.isDiesel)
 console.log(carsWithOnlyDiesel);
 
 /* Задание 3
 Создайте новый массив, где оставьте только машины не с дизельным двигателем.
 */
 const carsWithoutDiesel = cars.filter((car) => car.isDiesel === false);
+// cars.filter((car) => !car.isDiesel)
 console.log(carsWithoutDiesel);
 
 /* Задание 4
 Посчитайте общую стоимость всех машин не с дизельным двигателем.
 */
-const totalPriceWithoutDiesel = carsWithoutDiesel.reduce(
-  (prev, next) => prev.price + next.price
-);
+// Неправильное решение(!)
+// const totalPriceWithoutDiesel = carsWithoutDiesel.reduce(
+//   (prev, next) => prev.price + next.price 22000.price + 30000 -> undefinded + 30000
+// );
+const totalPriceWithoutDiesel = carsWithoutDiesel.reduce((prev, next) => {
+  prev + next.price;
+}, 0);
 console.log(totalPriceWithoutDiesel);
 
 /* Задание 5
