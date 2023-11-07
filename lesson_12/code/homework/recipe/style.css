@@ -1,0 +1,36 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+}
+li {
+  margin: 3px;
+}
+ul {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+button {
+  width: 80%;
+  background-color: azure;
+  color: blue;
+}
+.container-2 {
+  background-color: blueviolet;
+}
+ol {
+  display: flex;
+  flex-direction: column;
+  color: yellow;
+}
+#clearBtn {
+  width: 100%;
+  padding: 10px;
+}
+p {
+  text-align: center;
+  color: white;
+}
