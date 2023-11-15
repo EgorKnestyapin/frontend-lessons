@@ -11,13 +11,17 @@ const WEATHER_INFO_CONTAINER = document.querySelector(
 // Тексты с информацией
 const WEATHER_CITY = document.querySelector("#weather-city");
 const WEATHER_ICON = document.querySelector("#weather-icon");
+const TEMPERATURE = document.querySelector("#temperature");
 
 // Наш APP_ID
 const APP_ID = "339eefdb8be5d321edc00550315211c1";
 
 const createWeatherCard = (weatherData) => {
+  TEMPERATURE.textContent = Math.round(weatherData.main.temp - 273, 15) + "°";
   WEATHER_CITY.textContent = weatherData.name;
   WEATHER_ICON.src = `http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
+  WEATHER_ICON.style.height = "100px";
+  WEATHER_ICON.style.width = "100px";
 
   LOADING_TEXT.style.display = "none";
   WEATHER_INFO_CONTAINER.style.display = "flex";
