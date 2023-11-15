@@ -17,11 +17,9 @@ const TEMPERATURE = document.querySelector("#temperature");
 const APP_ID = "339eefdb8be5d321edc00550315211c1";
 
 const createWeatherCard = (weatherData) => {
-  TEMPERATURE.textContent = Math.round(weatherData.main.temp - 273, 15) + "°";
+  TEMPERATURE.textContent = `${Math.round(weatherData.main.temp - 273, 15)}°`;
   WEATHER_CITY.textContent = weatherData.name;
   WEATHER_ICON.src = `http://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-  WEATHER_ICON.style.height = "100px";
-  WEATHER_ICON.style.width = "100px";
 
   LOADING_TEXT.style.display = "none";
   WEATHER_INFO_CONTAINER.style.display = "flex";
@@ -52,7 +50,17 @@ async function searchWeatherByCity() {
     }
     createWeatherCard(result);
   } catch (error) {
-    console.log(error);
+    console.log(error.response);
+    WEATHER_INFO_CONTAINER.id = "api-error";
+    WEATHER_INFO_CONTAINER.innerHTML = "";
+    const text_error1 = document.createElement("div");
+    text_error1.textContent = "API Error";
+    text_error1.style.color = "red";
+    text_error1.style.marginBottom = "10px";
+    WEATHER_INFO_CONTAINER.appendChild(text_error1);
+    const text_error2 = document.createElement("div");
+    text_error2.textContent = "Something went wrong with API data";
+    WEATHER_INFO_CONTAINER.appendChild(text_error2);
   }
 }
 
