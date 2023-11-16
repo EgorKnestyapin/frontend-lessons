@@ -8,18 +8,23 @@
   </head>
   <body>
     <div id="root">
-      <header><h1>Weather app</h1></header>
+      <header><h1>Weather App</h1></header>
       <main id="main">
         <div id="search-wrapper">
-          <label for="city-input">City name</label>
           <input type="text" id="city-input" placeholder="Enter city name" />
-          <button type="button" id="search-button">Show weather</button>
+          <button type="button" id="search-button">Search</button>
         </div>
         <div id="load">Loading...</div>
         <div id="weather-info-container">
-          <p id="weather-city">City name</p>
-          <img id="weather-icon">
+          <div id="weather-container">
+            <div id="temperature">Temp</div>
+            <div id="weather-city">City name</div>
+          </div>
+          <div id="weather-icon-container">
+            <img id="weather-icon" />
+          </div>
         </div>
+        <div id="api-error"></div>
       </main>
     </div>
   </body>
