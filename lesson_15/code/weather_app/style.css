@@ -135,7 +135,7 @@ main {
   height: 100px;
 }
 #api-error {
-  display: flex;
+  display: none;
   flex-direction: column;
   margin-top: 50px;
   padding: 30px;
