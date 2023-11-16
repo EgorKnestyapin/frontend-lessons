@@ -38,7 +38,7 @@ async function searchWeatherByCity() {
   if (CITY_NAME.length === 0) {
     return alert("Please enter a city name");
   }
-  LOADING_TEXT.style.disply = "flex";
+  LOADING_TEXT.style.display = "flex";
   WEATHER_INFO_CONTAINER.style.display = "none";
   API_ERROR.style.display = "none";
 
